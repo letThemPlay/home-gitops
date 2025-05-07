@@ -12,6 +12,9 @@ spec:
         name: headlamp
       version: 0.30.1
   interval: 1m0s
+  install:
+    remediation:
+      retries: 3
   values:
     config:
       pluginsDir: /build/plugins
