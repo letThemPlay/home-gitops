@@ -22,6 +22,4 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    zfs-localpv:
-      zfsNode:
-        encrKeysDir: /var/openebs/keys
+    zfs.provisioner.enabled: false
