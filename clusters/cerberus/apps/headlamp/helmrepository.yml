@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: headlamp
+  namespace: headlamp
 spec:
   interval: 1h
-  provider: generic
-  url: https://kubernetes-sigs.github.io/headlamp
+  url: https://headlamp-k8s.github.io/headlamp
