@@ -4,3 +4,4 @@ namespace: openebs
 resources:
   - namespace.yml
   - helmrepository.yml
+  - helmrelease.yml
