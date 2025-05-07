@@ -3,4 +3,4 @@ resources:
   - helmrepository.yml
   - helmrelease.yml
 
-namespace: flux-system
+namespace: headlamp
