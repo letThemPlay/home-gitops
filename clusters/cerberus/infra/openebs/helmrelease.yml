@@ -22,14 +22,6 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    ndm:
-      enabled: false
-    localProvisioner:
-      enabled: true
-      deviceClass:
-        enabled: false
-      hostpathClass:
-        enabled: true
-        name: openebs-hostpath
-        isDefaultClass: false
-        basePath: /var/openebs/local
+    zfs-localpv:
+      zfsNode:
+        encrKeysDir: /var/openebs/keys
