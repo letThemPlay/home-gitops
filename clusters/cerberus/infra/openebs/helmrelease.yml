@@ -23,4 +23,6 @@ spec:
     keepHistory: false
   values:
     zfs.provisioner.enabled: false
-    zfs-localpv.zfsNode.encrKeysDir: /var/openebs/keys
+    zfs-localpv:
+      zfsNode:
+        encrKeysDir: /var/openebs/keys
