@@ -1,0 +1,7 @@
+configurations:
+  - kustomizeconfig.yml
+
+resources:
+  - helmrepository.yml
+
+namespace: flux-system
