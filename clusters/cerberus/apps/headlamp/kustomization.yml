@@ -1,5 +1,6 @@
-namespace: flux-system
 resources:
   - namespace.yml
   - helmrepository.yml
   - helmrelease.yml
+
+namespace: flux-system
