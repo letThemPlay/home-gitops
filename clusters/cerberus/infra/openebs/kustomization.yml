@@ -8,4 +8,5 @@ resources:
   - tw1diskpool.yml
   - tw2diskpool.yml
   - tw3diskpool.yml
+  - storageclass.yml
 
