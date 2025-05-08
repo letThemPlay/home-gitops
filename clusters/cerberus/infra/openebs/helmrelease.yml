@@ -24,9 +24,8 @@ spec:
   values:
     mayastor:
       io_engine:
-        coreList:
-          - 1
-          - 2
+        cpuCount: "2"
+        coreList: []
       csi:
         node:
           initContainers:
