@@ -24,7 +24,9 @@ spec:
   values:
     mayastor:
       io_engine:
-        coreList: '{1,2}'
+        coreList:
+          - 1
+          - 2
       csi:
         node:
           initContainers:
