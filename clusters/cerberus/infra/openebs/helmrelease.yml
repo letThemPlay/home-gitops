@@ -22,9 +22,9 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    io_engine:
-      coreList: '{1,2}'
     mayastor:
+      io_engine:
+        coreList: '{1,2}'
       csi:
         node:
           initContainers:
