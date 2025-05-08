@@ -6,7 +6,9 @@ metadata:
 spec:
   node: tw1
   disks: ["aio:///dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_drive-scsi1"]
+
 ---
+
 apiVersion: "openebs.io/v1beta2"
 kind: DiskPool
 metadata:
