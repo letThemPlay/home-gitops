@@ -3,5 +3,6 @@ kind: Kustomization
 namespace: headlamp
 resources:
   - namespace.yml
+  - persistentvolumeclaim.yml
   - helmrepository.yml
   - helmrelease.yml

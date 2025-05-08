@@ -40,4 +40,4 @@ spec:
     volumes:
       - name: headlamp-plugins
         persistentVolumeClaim:
-          claimName: headlamp
+          claimName: headlamp-vc
