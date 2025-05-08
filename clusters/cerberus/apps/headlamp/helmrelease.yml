@@ -16,6 +16,9 @@ spec:
     remediation:
       retries: 3
   values:
+    securityContext:
+      fsGroup: 101
+      runAsUser: 100
     config:
       pluginsDir: /build/plugins
     initContainers:
@@ -42,5 +45,3 @@ spec:
       - name: headlamp-plugins
         persistentVolumeClaim:
           claimName: headlamp
-    securityContext:
-      fsgroup: 100
