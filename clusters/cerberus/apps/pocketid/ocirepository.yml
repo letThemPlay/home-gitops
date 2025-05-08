@@ -6,3 +6,5 @@ metadata:
 spec:
   interval: 1h
   url: oci://ghcr.io/hobbit44/pocket-id-helm/pocket-id
+  ref:
+    tag: 0.52.0
