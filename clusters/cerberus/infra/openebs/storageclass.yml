@@ -5,4 +5,4 @@ metadata:
 parameters:
   protocol: nvmf
   repl: "3"
-provisioner: io.openebs.csi-mayastore
+provisioner: io.openebs.csi-mayastor
