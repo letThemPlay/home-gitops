@@ -34,10 +34,11 @@ spec:
        - ReadWriteOnce
       enabled: true
       size: 1Gi
+      storageClassName: mayastor-3
     volumeMounts:
       - mountPath: /build/plugins
         name: headlamp-plugins
     volumes:
       - name: headlamp-plugins
         persistentVolumeClaim:
-          claimName: headlamp-vc
+          claimName: headlamp
