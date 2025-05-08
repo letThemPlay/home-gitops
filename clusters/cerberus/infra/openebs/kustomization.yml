@@ -5,4 +5,7 @@ resources:
   - namespace.yml
   - helmrepository.yml
   - helmrelease.yml
-  - diskpool.yml
+  - tw1diskpool.yml
+  - tw2diskpool.yml
+  - tw3diskpool.yml
+
