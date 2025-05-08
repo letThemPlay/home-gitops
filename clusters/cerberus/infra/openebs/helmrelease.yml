@@ -22,6 +22,8 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    etcd:
+      replicaCount: 2
     mayastor:
       io_engine:
         cpuCount: "2"
