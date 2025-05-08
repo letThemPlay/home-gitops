@@ -3,4 +3,4 @@ kind: Kustomization
 namespace: pocketid
 resources:
   - namespace.yml
-  - helmrepository.yml
+  - ocirepository.yml

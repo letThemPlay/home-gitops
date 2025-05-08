@@ -1,8 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1
-kind: HelmRepository
+kind: OCIRepository
 metadata:
   name: pocketid
   namespace: pocketid
 spec:
   interval: 1h
-  url: https://ghcr.io/hobbit44/pocket-id-helm/pocket-id
+  url: oci://ghcr.io/hobbit44/pocket-id-helm/pocket-id
