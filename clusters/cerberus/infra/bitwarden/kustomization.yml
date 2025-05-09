@@ -1,11 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: openebs
+namespace: bitwarden
 resources:
   - namespace.yml
   - helmrepository.yml
-  - helmrelease.yml
-  - tw1diskpool.yml
-  - tw2diskpool.yml
-  - tw3diskpool.yml
-  - storageclass.yml
