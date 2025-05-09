@@ -23,8 +23,10 @@ spec:
     keepHistory: false
   values:
     server:
-     affinity: ""
-     ha:
+      affinity: ""
+      datastorage:
+        storageClass: mayastor-3
+      ha:
         enabled: true
         raft: 
            enabled: true
