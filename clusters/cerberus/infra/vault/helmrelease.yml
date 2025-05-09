@@ -24,7 +24,7 @@ spec:
   values:
     server:
       affinity: ""
-      datastorage:
+      dataStorage:
         storageClass: mayastor-3
       ha:
         enabled: true
