@@ -11,7 +11,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: infisical
-        namespace: infisical
   install:
     remediation:
       retries: 1
