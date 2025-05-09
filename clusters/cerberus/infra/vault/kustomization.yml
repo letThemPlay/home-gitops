@@ -3,6 +3,4 @@ kind: Kustomization
 namespace: vault
 resources:
   - namespace.yml
-  - persistentvolumeclaim.yml
   - helmrepository.yml
-  - helmrelease.yml
