@@ -9,3 +9,4 @@ resources:
   - tw2diskpool.yml
   - tw3diskpool.yml
   - storageclass.yml
+  - defaultstorageclass.yml
