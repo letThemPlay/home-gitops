@@ -4,3 +4,4 @@ namespace: infisical
 resources:
   - namespace.yml
   - helmrepository.yml
+  - helmrelease.yml
