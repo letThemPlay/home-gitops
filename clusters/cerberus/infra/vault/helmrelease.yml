@@ -22,6 +22,7 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    dataStorage:
-      storageClass: mayastor-3
+    server:
+      dataStorage:
+        storageClass: mayastor-3
   
