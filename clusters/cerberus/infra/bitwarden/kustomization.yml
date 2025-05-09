@@ -4,3 +4,4 @@ namespace: bitwarden
 resources:
   - namespace.yml
   - helmrepository.yml
+  - helmrelease.yml
