@@ -6,6 +6,7 @@ metadata:
     storageclass.kubernetes.io/is-default-class: true
 parameters:
   protocol: nvmf
-  repl: "1"
+  repl: "2"
   fstype: "xfs"
 provisioner: io.openebs.csi-mayastor
+allowVolumeExpansion: true

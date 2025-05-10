@@ -42,5 +42,6 @@ spec:
                cluster_address = "[::]:8201"
                tls_disable = "true"            
             }
-
+            
             service_registration "kubernetes" {}
+

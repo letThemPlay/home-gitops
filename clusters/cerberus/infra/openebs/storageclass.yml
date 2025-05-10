@@ -7,3 +7,4 @@ parameters:
   repl: "3"
   fstype: "xfs"
 provisioner: io.openebs.csi-mayastor
+allowVolumeExpansion: true
