@@ -4,5 +4,3 @@ namespace: vault
 resources:
   - namespace.yml
   - helmrepository.yml
-  - helmrelease.yml
-  - deployment.yml
