@@ -1,11 +1,12 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: mayastor-1
+  name: mayastor-2
   annotations:
+    storageclass.kubernetes.io/is-default-class: true
 parameters:
   protocol: nvmf
-  repl: "1"
+  repl: "2"
   fstype: "xfs"
 provisioner: io.openebs.csi-mayastor
 allowVolumeExpansion: true

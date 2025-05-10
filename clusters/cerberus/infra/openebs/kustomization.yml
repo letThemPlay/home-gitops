@@ -10,3 +10,4 @@ resources:
   - tw3diskpool.yml
   - storageclass.yml
   - defaultstorageclass.yml
+  - mayastor-2.yml
