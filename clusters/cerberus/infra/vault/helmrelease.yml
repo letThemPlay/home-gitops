@@ -24,8 +24,6 @@ spec:
   values:
     server:
       affinity: ""
-      dataStorage:
-        storageClass: mayastor-3
       ha:
         enabled: true
         raft: 
@@ -42,6 +40,6 @@ spec:
                cluster_address = "[::]:8201"
                tls_disable = "true"            
             }
-            
+
             service_registration "kubernetes" {}
 
