@@ -22,6 +22,11 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    ui:
+      enabled: true
+      serviceType: "LoadBalancer"
+      serviceNodePort: null
+      externalPort: 8200
     server:
       affinity: ""
       ha:
