@@ -36,6 +36,7 @@ spec:
             }
 
             ui.enabled = true
+            api_addr = "http://POD_IP:8200"
 
             listener "tcp" {
                address = "[::]:8200"
