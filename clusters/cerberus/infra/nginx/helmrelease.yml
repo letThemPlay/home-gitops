@@ -7,7 +7,7 @@ spec:
   interval: 30m
   chart:
     spec:
-      chart: nginx
+      chart: ingress-nginx
       version: 4.12.2
       sourceRef:
         kind: HelmRepository
