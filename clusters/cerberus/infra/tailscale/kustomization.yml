@@ -4,3 +4,4 @@ namespace: tailscale
 resources:
   - namespace.yml
   - helmrepository.yml
+  - secretstore.yml
