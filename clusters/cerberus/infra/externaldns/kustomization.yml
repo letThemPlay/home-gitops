@@ -6,3 +6,5 @@ metadata:
 resources:
   - namespace.yml
   - helmrepository.yml
+  - secretstore.yml
+  - externalsecret.yml
