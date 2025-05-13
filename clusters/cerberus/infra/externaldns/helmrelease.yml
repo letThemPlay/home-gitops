@@ -25,6 +25,11 @@ spec:
   values:
     provider:
       name: cloudflare
+    domainFilters:
+      valueFrom:
+        secretKeyRef:
+          name: domainfilters
+          key: domainFilters
     txtOwnerId: cerberusk8s
     policy: sync
     env:
