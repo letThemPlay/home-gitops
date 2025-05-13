@@ -7,7 +7,7 @@ spec:
   interval: 30m
   chart:
     spec:
-      chart: externaldns
+      chart: external-dns
       version: 1.16.1
       sourceRef:
         kind: HelmRepository
