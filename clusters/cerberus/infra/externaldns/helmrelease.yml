@@ -28,7 +28,7 @@ spec:
     domainFilters:
       valueFrom:
         secretKeyRef:
-          name: secrets
+          name: domainFilterSecrets
           key: domainFilters
     txtOwnerId: cerberusk8s
     policy: sync

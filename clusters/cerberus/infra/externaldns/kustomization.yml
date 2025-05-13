@@ -8,4 +8,5 @@ resources:
   - helmrepository.yml
   - secretstore.yml
   - externalsecret.yml
+  - externalsecret2.yml
   - helmrelease.yml
