@@ -5,11 +5,7 @@ metadata:
   namespace: cert-manager
 spec:
   acme:
-    email:
-      valueFrom:
-        secretKeyRef:
-          name: secrets
-          key: email
+    email: "reminder.letsencrypt@mail.letthemplay.tech"
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: letsencrypt-staging
