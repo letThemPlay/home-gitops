@@ -24,6 +24,8 @@ spec:
     keepHistory: false
   values:
     controller:
+      admissionsWebhooks:
+        enabled: false
       config:
         ssl-redirect: "true"
         force-ssl-redirect: "true"
