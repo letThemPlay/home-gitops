@@ -29,7 +29,7 @@ spec:
         force-ssl-redirect: "true"
       replicaCount: 1
       service:
-        annotations:
+        labels:
           tailscale.com/proxy-class: "tun-access"
         type: LoadBalancer
         loadBalancerClass: tailscale
