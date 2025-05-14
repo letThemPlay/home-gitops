@@ -23,9 +23,9 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    crd:
+    crds:
       enabled: true
     prometheus:
       enabled: true
     webhook:
-      timeourSeconds: 4
+      timeoutSeconds: 4
