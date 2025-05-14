@@ -31,6 +31,8 @@ spec:
       service:
         labels:
           tailscale.com/proxy-class: "tun-access"
+        annotations:
+          tailscale.com/expose: "true"
         type: LoadBalancer
         loadBalancerClass: tailscale
       ingressClassResource:
