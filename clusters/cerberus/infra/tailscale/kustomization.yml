@@ -9,3 +9,4 @@ resources:
   - secretstore.yml
   - secrets.yml
   - helmrelease.yml
+  - proxyclass.yml
