@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-staging
-    external-dna.alpha.kubernetes.io/hostname: headlamp.kdmorris.dev
+    external-dns.alpha.kubernetes.io/hostname: headlamp.kdmorris.dev
     kubernetes.io/tls-acme: "true"
   name: headlamp
   namespace: headlamp
