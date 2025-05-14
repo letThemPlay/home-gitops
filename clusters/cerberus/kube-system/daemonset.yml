@@ -14,7 +14,7 @@ spec:
       labels:
         app.kubernetes.io/name: generic-device-plugin
     spec:
-      priorityClassName: system-node-plugin
+      priorityClassName: system-node-critical
       tolerations:
       - operator: "Exists"
         effect: "NoExecute"
@@ -25,11 +25,11 @@ spec:
         args:
         - --device
         - |
-            name: tun
-            groups:
-            - count: 1000
-              paths:
-              - path: /dev/net/tun
+          name: tun
+          groups:
+          - count: 1000
+            paths:
+            - path: /dev/net/tun
         name: generic-device-plugin
         resources:
           requests:
