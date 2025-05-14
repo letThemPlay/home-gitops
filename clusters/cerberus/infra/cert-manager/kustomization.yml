@@ -9,3 +9,4 @@ resources:
   - secretstore.yml
   - externalsecret.yml
   - helmrelease.yml
+  - clusterissuer.yml
