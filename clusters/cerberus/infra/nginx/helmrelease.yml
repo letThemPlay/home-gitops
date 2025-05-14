@@ -24,6 +24,8 @@ spec:
     keepHistory: false
   values:
     controller:
+      podLabels:
+        tailscale.com/proxy-class: "tun-access"
       admissionWebhooks:
         enabled: false
       config:
