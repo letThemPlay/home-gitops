@@ -9,3 +9,4 @@ resources:
   - externalsecret.yml
   - helmrepository.yml
   - helmrelease.yml
+  - cert-manager.yml
