@@ -30,12 +30,12 @@ spec:
           enabled: true
           setNodeId: true
           config: |
+            ui = true
             cluster_name = "vault-integrated-storage"
             storage "raft" {
                path    = "/vault/data/"
             }
 
-            ui.enabled = true
             api_addr = "http://POD_IP:8200"
 
             listener "tcp" {
