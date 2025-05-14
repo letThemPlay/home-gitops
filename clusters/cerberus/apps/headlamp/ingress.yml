@@ -5,7 +5,6 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt-staging
     external-dna.alpha.kubernetes.io/hostname: headlamp.kdmorris.dev
     kubernetes.io/tls-acme: "true"
-    tailscale.com/proxy-class: "tun-access"
   name: headlamp
   namespace: headlamp
 spec:
