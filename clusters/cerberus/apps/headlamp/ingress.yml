@@ -16,7 +16,10 @@ spec:
         - backend:
             service:
               name: headlamp
-              port: 80
+              port:
+                number: 80
+          path: /
+          pathType: Prefix
   tls:
   - secretName: headlamp.kdmorris.dev
     hosts:
