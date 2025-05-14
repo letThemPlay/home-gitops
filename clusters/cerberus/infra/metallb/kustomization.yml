@@ -6,3 +6,4 @@ metadata:
 resources:
   - namespace.yml
   - helmrepository.yml
+  - helmrelease.yml
