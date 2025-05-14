@@ -4,4 +4,3 @@ metadata:
   name: kube-system
   namespace: kube-system
 resources:
-  - daemonset.yml
