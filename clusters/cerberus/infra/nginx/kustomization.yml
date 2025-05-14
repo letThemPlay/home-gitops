@@ -7,4 +7,5 @@ resources:
   - namespace.yml
   - secretstore.yml
   - externalsecret.yml
+  - helmrepository.yml
   - helmrelease.yml
