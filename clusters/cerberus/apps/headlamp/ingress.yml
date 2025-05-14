@@ -1,15 +1,23 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-staging
+    external-dna.alpha.kubernetes.io/hostname: headlamp.kdmorris.dev
+    kubernetes.io/tls-acme: "true"
   name: headlamp
   namespace: headlamp
 spec:
-  ingressClassName: tailscale
-  defaultBackend:
-    service: 
-      name: headlamp
-      port:
-        number: 80
+  ingressClassName: nginx
+  rules:
+    - host: headlamp.kdmorris.dev
+      http:
+        paths:
+        - backend:
+            service:
+              name: headlamp
+              port: 80
   tls:
-    - hosts:
-      - headlamp
+  - secretName: headlamp.kdmorris.dev
+    hosts:
+    - headlamp.kdmorris.dev
