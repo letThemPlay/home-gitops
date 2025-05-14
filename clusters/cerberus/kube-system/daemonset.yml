@@ -48,7 +48,7 @@ spec:
           mountPath: /var/lib/kubelet/device-plugins
         - name: dev
           mountPath: /dev
-      volumeMounts:
+      volumes:
       - name: device-plugin
         hostPath:
           path: /var/lib/kubelet/device-plugins
