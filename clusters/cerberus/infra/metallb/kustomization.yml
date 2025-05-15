@@ -4,3 +4,7 @@ metadata:
   name: metallb
   namespace: metallb
 resources:
+  - namespace.yml
+  - helmrepository.yml
+  - helmrelease.yml
+  - IPAddressPool.yml
