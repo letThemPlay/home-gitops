@@ -7,4 +7,3 @@ resources:
   - namespace.yml
   - helmrepository.yml
   - helmrelease.yml
-  - IPAddressPool.yml
