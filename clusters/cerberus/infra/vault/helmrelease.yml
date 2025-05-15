@@ -32,6 +32,7 @@ spec:
           external-dns.alpha.kubernetes.io/hostname: vault.kdmorris.dev
           kubernetes.io/tls-acme: "true"
         ingressClassName: nginx
+        activeService: true
         hosts:
           - host: vault.kdmorris.dev
         tls:
