@@ -4,3 +4,9 @@ metadata:
   name: tailscale
   namespace: tailscale
 resources:
+  - namespace.yml
+  - helmrepository.yml
+  - secretstore.yml
+  - secrets.yml
+  - helmrelease.yml
+  - proxyclass.yml
