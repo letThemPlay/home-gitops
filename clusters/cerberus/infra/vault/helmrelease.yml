@@ -23,6 +23,19 @@ spec:
     keepHistory: false
   values:
     server:
+      ingress:
+        enabled: true
+        annotations:
+          cert-manager.io/cluster-issuer: letsencrypt-prod
+          external-dns.alpha.kubernetes.io/hostname: vault.kdmorris.dev
+          kubernetes.io/tls-acme: "true"
+        ingressClassName: nginx
+        hosts:
+          - host: vault.kdmorris.dev
+        tls:
+        - secretName: vault.kdmorris.dev
+          hosts:
+          - vault.kdmorris.dev
       affinity: ""
       ha:
         enabled: true
@@ -39,8 +52,8 @@ spec:
             api_addr = "http://POD_IP:8200"
 
             listener "tcp" {
-               address = "0.0.0.0:8200"
-               cluster_address = "0.0.0.0:8201"
+               address = "[::]:8200"
+               cluster_address = "[::]:8201"
                tls_disable = "true"
             }
 
