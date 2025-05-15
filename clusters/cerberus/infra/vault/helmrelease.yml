@@ -43,6 +43,7 @@ spec:
       affinity: ""
       ha:
         enabled: true
+        clusterAddr: http://$(HOSTNAME).vault-internal.vault.svc.cluster.local:8201
         raft: 
           enabled: true
           setNodeId: true
