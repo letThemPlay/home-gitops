@@ -43,7 +43,7 @@ spec:
       affinity: ""
       ha:
         enabled: true
-        clusterAddr: http://$(HOSTNAME).vault-internal.vault.svc.cluster.local:8201
+        apiAddr: "http://127.0.0.1:8200"
         raft: 
           enabled: true
           setNodeId: true
@@ -60,6 +60,8 @@ spec:
             }
 
             ui = true
+
+            api_addr = "[::]:8200"
 
             service_registration "kubernetes" {}
 
