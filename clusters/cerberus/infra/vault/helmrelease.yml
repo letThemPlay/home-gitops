@@ -64,4 +64,20 @@ spec:
             api_addr = "[::]:8200"
 
             service_registration "kubernetes" {}
+        config: |
+          cluster_name = "vault-integrated-storage"
+          storage "raft" {
+             path    = "/vault/data/"
+          }
 
+          listener "tcp" {
+             address = "0.0.0.0:8200"
+             cluster_address = "0.0.0.0:8201"
+             tls_disable = 1
+          }
+
+          ui = true
+
+          api_addr = "[::]:8200"
+
+          service_registration "kubernetes" {}
