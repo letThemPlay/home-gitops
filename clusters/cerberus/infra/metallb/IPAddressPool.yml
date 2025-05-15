@@ -1,17 +1,9 @@
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
-  name: first-pool
+  name: default
   namespace: metallb
 spec:
   addresses:
-  - 10.20.3.1-10.20.3.100
----
-apiVersion: metallb.io/v1beta1
-kind: L2Advertisement
-metadata:
-  name: l2-advertisement
-  namespace: metallb
-spec:
-  ipAddressPools:
-  - first-pool
+  - 10.20.3.1-10.20.3.5
+  autoAssign: true
