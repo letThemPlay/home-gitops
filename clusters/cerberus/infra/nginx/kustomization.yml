@@ -4,6 +4,3 @@ metadata:
   name: nginx
   namespace: nginx
 resources:
-  - namespace.yml
-  - helmrepository.yml
-  - helmrelease.yml
