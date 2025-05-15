@@ -22,6 +22,8 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    ui:
+      enabled: true
     server:
       ingress:
         enabled: true
