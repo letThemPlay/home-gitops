@@ -29,6 +29,7 @@ spec:
           cert-manager.io/cluster-issuer: letsencrypt-prod
           external-dns.alpha.kubernetes.io/hostname: vault.kdmorris.dev
           kubernetes.io/tls-acme: "true"
+          nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
         ingressClassName: nginx
         activeService: true
         hosts:
