@@ -15,12 +15,8 @@ spec:
   prune: true
   healthChecks:
   - apiVersion: apps/v1
-    kind: CustomResourceDefinition
-    name: L2Advertisement
-    namespace: metallb-system
-  - apiVersion: apps/v1
-    kind: CustomResourceDefinition
-    name: IPAddressPool
+    kind: Deployment
+    name: metallb-controller
     namespace: metallb-system
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
