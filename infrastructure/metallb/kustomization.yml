@@ -13,6 +13,15 @@ spec:
     name: flux-system
   path: ./infrastructure/metallb/controller
   prune: true
+  healthChecks:
+  - apiVersion: apps/v1
+    kind: CustomResourceDefinition
+    name: L2Advertisement
+    namespace: metallb
+  - apiVersion: apps/v1
+    kind: CustomResourceDefinition
+    name: IPAddressPool
+    namespace: metallb
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
