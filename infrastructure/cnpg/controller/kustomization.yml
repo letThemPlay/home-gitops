@@ -10,3 +10,6 @@ configMapGenerator:
   - name: cnpg-values
     files:
       - values.yaml=values.yml
+
+configurations:
+  - kustomizeconfig.yml
