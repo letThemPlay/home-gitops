@@ -1,22 +1,3 @@
-#apiVersion: kustomize.toolkit.fluxcd.io/v1
-#kind: Kustomization
-#metadata:
-#  name: clustersecret-secrets
-#  namespace: flux-system
-#spec:
-#  interval: 1h
-#  retryInterval: 1m
-#  timeout: 5m
-#  sourceRef:
-#    kind: GitRepository
-#    name: flux-system
-#  path: ./infrastructure/clustersecret/secrets
-#  prune: true
-#  decryption:
-#    provider: sops
-#    secretRef:
-#      name: sops-age
----
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
@@ -44,3 +25,22 @@ spec:
 #    kind: Deployment
 #    name: external-secrets-webhook
 #    namespace: external-secrets
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: clustersecret-secrets
+  namespace: flux-system
+spec:
+  interval: 1h
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infrastructure/clustersecret/secrets
+  prune: true
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
