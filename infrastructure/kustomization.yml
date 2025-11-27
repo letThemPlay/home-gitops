@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - metallb/kustomization.yml
   - cnpg/kustomization.yml
+  - external-secrets/kustomization.yml
