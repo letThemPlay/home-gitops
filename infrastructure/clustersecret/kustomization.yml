@@ -12,19 +12,11 @@ spec:
     name: flux-system
   path: ./infrastructure/clustersecret/controller
   prune: true
-#  healthChecks:
-#  - apiVersion: apps/v1
-#    kind: Deployment
-#    name: external-secrets
-#    namespace: external-secrets
-#  - apiVersion: apps/v1
-#    kind: Deployment
-#    name: external-secrets-cert-controller
-#    namespace: external-secrets
-#  - apiVersion: apps/v1
-#    kind: Deployment
-#    name: external-secrets-webhook
-#    namespace: external-secrets
+  healthChecks:
+  - apiVersion: apps/v1
+    kind: Deployment
+    name: clustersecret-cluster-secret-clustersecret
+    namespace: clustersecret
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -32,6 +24,8 @@ metadata:
   name: clustersecret-secrets
   namespace: flux-system
 spec:
+  dependsOn:
+    - clustersecret-system
   interval: 1h
   retryInterval: 1m
   timeout: 5m
