@@ -8,4 +8,3 @@ resources:
   - secrets/kustomization.yml
   - cert-manager/kustomization.yml
   - nginx/kustomization.yml
-  - openebs/kustomization.yml
