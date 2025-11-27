@@ -5,5 +5,5 @@ resources:
   - cnpg/kustomization.yml
   - externalsecrets/kustomization.yml
   - reflector/kustomization.yml
-  - clustersecret/kustomization.yml
+  - secrets/kustomization.yml
   - cert-manager/kustomization.yml
