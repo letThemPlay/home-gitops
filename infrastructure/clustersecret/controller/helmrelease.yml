@@ -7,7 +7,7 @@ spec:
   interval: 30m
   chart:
     spec:
-      chart: clustersecret
+      chart: cluster-secret
       version: 0.2.1
       sourceRef:
         kind: HelmRepository
