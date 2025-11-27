@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: nginx
+resources:
+  - namespace.yml
+  - helmrepository.yml
+  - helmrelease.yml
+
+configMapGenerator:
+  - name: nginx-values
+    files:
+      - values.yaml=values.yml
+
+configurations:
+  - kustomizeconfig.yml
