@@ -1,0 +1,38 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: cert-manager-system
+  namespace: flux-system
+spec:
+  dependsOn: externalsecrets-system
+  interval: 1h
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infrastructure/cert-manager/controller
+  prune: true
+#  healthChecks:
+#  - apiVersion: apps/v1
+#    kind: Deployment
+#    name: metallb-controller
+#    namespace: metallb
+#---
+#apiVersion: kustomize.toolkit.fluxcd.io/v1
+#kind: Kustomization
+#metadata:
+#  name: metallb-configs
+#  namespace: flux-system
+#spec:
+#  dependsOn:
+#    - name: metallb-system
+#  interval: 1h
+#  retryInterval: 1m
+#  timeout: 5m
+#  sourceRef:
+#    kind: GitRepository
+#    name: flux-system
+#  path: ./infrastructure/metallb/config
+#  prune: true
