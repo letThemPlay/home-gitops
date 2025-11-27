@@ -4,5 +4,6 @@ resources:
   - metallb/kustomization.yml
   - cnpg/kustomization.yml
   - externalsecrets/kustomization.yml
+  - reflector/kustomization.yml
   - clustersecret/kustomization.yml
   - cert-manager/kustomization.yml
