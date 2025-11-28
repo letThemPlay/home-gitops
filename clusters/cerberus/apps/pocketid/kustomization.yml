@@ -3,4 +3,3 @@ kind: Kustomization
 namespace: pocketid
 resources:
   - namespace.yml
-  - persistentvolumeclaim.yml
