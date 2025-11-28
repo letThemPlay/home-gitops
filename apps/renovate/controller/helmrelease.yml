@@ -1,0 +1,56 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: renovate
+  namespace: renovate
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: renovate
+      version: 41.37.4
+      sourceRef:
+        kind: HelmRepository
+        name: renovate
+        namespace: renovate
+  install:
+    remediation:
+      retries: 1
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
+  values:
+    cronjob:
+      schedule: "0 3 * * *"
+    redis:
+      enabled: false
+    envFrom:
+      - secretRef:
+          name: github
+    renovate:
+      config: |
+        {
+          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+          "platform": "github",
+          "token": "${accessToken}",
+          "repostories": ["letThemPlay/home-gitops"],
+          "extends": ["config:recommended"],
+          "enabledManagers": ["kubernetes", "flux"],
+          "flux": {
+            "fileMatch": ["cluster/.+\\.ya?ml$", "infrastructure/.+\\.ya?ml$", "apps/.+\\.ya?ml$"]
+          },
+          "kubernetes": {
+            "fileMatch": ["cluster/.+\\.ya?ml$", "infrastructure/.+\\.ya?ml$", "apps/.+\\.ya?ml$"]
+          },
+          "dependencyDashboard": true,
+          "branchConcurrentLimit": 5,
+          "prConcurrentLimit": 5,
+          "baseBranchPatterns": ["main"],
+          "automerge": false
+        }
+    persistence:
+      cache:
+        enabled: false
