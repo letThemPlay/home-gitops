@@ -26,7 +26,7 @@ metadata:
 spec:
   dependsOn:
     - name: cnpg-system
-    - name: openebs-config
+    - name: openebs-configs
   interval: 1h
   retryInterval: 1m
   timeout: 5m
