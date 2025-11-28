@@ -8,3 +8,4 @@ resources:
   - secrets/kustomization.yml
   - cert-manager/kustomization.yml
   - nginx/kustomization.yml
+  - cnpg/kustomization.yml
