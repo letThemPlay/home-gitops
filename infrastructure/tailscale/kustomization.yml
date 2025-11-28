@@ -21,25 +21,25 @@ spec:
       failed: status.conditions.filter(e, e.type == 'Ready').all(e, e.status == 'False')
       current: status.conditions.filter(e, e.type == 'Ready').all(e, e.status == 'True')
 ---
-#apiVersion: kustomize.toolkit.fluxcd.io/v1
-#kind: Kustomization
-#metadata:
-#  name: externaldns-system
-#  namespace: flux-system
-#spec:
-#  dependsOn:
-#    - name: externaldns-secrets
-#  interval: 1h
-#  retryInterval: 1m
-#  timeout: 5m
-#  sourceRef:
-#    kind: GitRepository
-#    name: flux-system
-#  path: ./infrastructure/externaldns/controller
-#  prune: true
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: tailscale-system
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: tailscale-secrets
+  interval: 1h
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infrastructure/tailscale/controller
+  prune: true
 #  healthChecks:
 #    - apiVersion: apps/v1
 #      kind: Deployment
 #      name: externaldns-external-dns
 #      namespace: externaldns
-#
+
