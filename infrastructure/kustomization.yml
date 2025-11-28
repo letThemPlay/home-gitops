@@ -8,6 +8,6 @@ resources:
   - secrets/kustomization.yml
   - cert-manager/kustomization.yml
   - tailscale/kustomization.yml
-  #- nginx/kustomization.yml
+  - nginx/kustomization.yml
   - cnpg/kustomization.yml
   - externaldns/kustomization.yml
