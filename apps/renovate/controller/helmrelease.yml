@@ -36,6 +36,11 @@ spec:
       - secretRef:
           name: github
     renovate:
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+            - ALL
       config: |
         {
           "$schema": "https://docs.renovatebot.com/renovate-schema.json",
