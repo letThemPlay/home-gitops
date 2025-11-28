@@ -62,5 +62,5 @@ spec:
   healthCheckExprs:
     - apiVersion: tailscale.com/v1alpha1
       kind: ProxyClass
-      failed: status.conditions.filter(e, e.type == 'Status').all(e, e.status == 'ProxyClassInvalid')
-      current: status.conditions.filter(e, e.type == 'Status').all(e, e.status == 'ProxyClassValid')
+      failed: status.conditions.filter(e, e.type == 'ProxyClassReady').all(e, e.status == 'False')
+      current: status.conditions.filter(e, e.type == 'ProxyClassReady').all(e, e.status == 'True')
