@@ -24,11 +24,11 @@ spec:
     keepHistory: false
   valuesFrom:
     - kind: Secret
-      name: tailscale-secrets
+      name: tailscale
       valuesKey: clientId
       targetPath: oauth.clientId
     - kind: Secret
-      name: tailscale-secrets
+      name: tailscale
       valuesKey: clientSecret
       targetPath: oauth.clientSecret
   values:
