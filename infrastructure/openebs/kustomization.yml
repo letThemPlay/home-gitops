@@ -15,12 +15,8 @@ spec:
   prune: true
   healthChecks:
     - apiVersion: helm.toolkit.fluxcd.io/v2
-      kind: CustomResourceDefinition
-      name: DiskPool
-      namespace: openebs
-    - apiVersion: helm.toolkit.fluxcd.io/v2
-      kind: CustomResourceDefinition
-      name: StorageClass
+      kind: HelmRelease
+      name: openebs
       namespace: openebs
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
