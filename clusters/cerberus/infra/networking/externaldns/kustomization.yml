@@ -4,8 +4,3 @@ metadata:
   name: externaldns
   namespace: externaldns
 resources:
-  - namespace.yml
-  - helmrepository.yml
-  - secretstore.yml
-  - externalsecret.yml
-  - helmrelease.yml
