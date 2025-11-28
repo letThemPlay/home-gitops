@@ -37,7 +37,7 @@ spec:
     name: flux-system
   path: ./infrastructure/externaldns/controller
   prune: true
-  healthCheck:
+  healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
       name: externaldns-external-dns
