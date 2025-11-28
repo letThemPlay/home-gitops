@@ -23,11 +23,6 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    securityContext:
-      allowPrivilegeEscalation: false
-      capabilities:
-        drop:
-          - ALL
     cronjob:
       schedule: "0 3 * * *"
     redis:
@@ -38,6 +33,7 @@ spec:
     renovate:
       securityContext:
         allowPrivilegeEscalation: false
+        runAsNonRoot: true
         capabilities:
           drop:
             - ALL
