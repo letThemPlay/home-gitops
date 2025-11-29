@@ -44,7 +44,7 @@ spec:
           "$schema": "https://docs.renovatebot.com/renovate-schema.json",
           "platform": "github",
           "token": "${accessToken}",
-          "repostories": ["letThemPlay/home-gitops"],
+          "repositories": ["letThemPlay/home-gitops"],
           "extends": ["config:recommended"],
           "enabledManagers": ["kubernetes", "flux"],
           "flux": {
