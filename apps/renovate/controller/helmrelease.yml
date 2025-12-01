@@ -22,47 +22,7 @@ spec:
       retries: 3
   uninstall:
     keepHistory: false
-  values:
-    cronjob:
-      schedule: "0 3 * * *"
-    redis:
-      enabled: false
-    env:
-    - name: RENOVATE_TOKEN
-      valueFrom:
-        secretKeyRef:
-          name: github
-          key: RENOVATE_TOKEN
-    - name: LOG_LEVEL
-      value: DEBUG
-    renovate:
-      securityContext:
-        allowPrivilegeEscalation: false
-        runAsNonRoot: true
-        seccompProfile:
-          type: RuntimeDefault
-        capabilities:
-          drop:
-            - ALL
-      config: |
-        {
-          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-          "platform": "github",
-          "repositories": ["letThemPlay/home-gitops"],
-          "extends": ["config:recommended"],
-          "enabledManagers": ["kubernetes", "flux"],
-          "flux": {
-            "fileMatch": ["cluster/.+\\.ya?ml$", "infrastructure/.+\\.ya?ml$", "apps/.+\\.ya?ml$"]
-          },
-          "kubernetes": {
-            "fileMatch": ["cluster/.+\\.ya?ml$", "infrastructure/.+\\.ya?ml$", "apps/.+\\.ya?ml$"]
-          },
-          "dependencyDashboard": true,
-          "branchConcurrentLimit": 5,
-          "prConcurrentLimit": 5,
-          "baseBranchPatterns": ["main"],
-          "automerge": false
-        }
-    persistence:
-      cache:
-        enabled: false
+  valuesFrom:
+    - kind: ConfigMap
+      name: renovate-values
+ 
