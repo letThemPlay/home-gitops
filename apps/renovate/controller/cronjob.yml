@@ -23,12 +23,12 @@ spec:
                 value: "github"
               - name: RENOVATE_REPOSITORIES
                 value: "letThemPlay/home-gitops"
-            securityContext:
-              allowPrivilegeEscalation: false
-              runAsNonRoot: true
-              seccompProfile:
-                type: RuntimeDefault
-              capabilities:
-                drop:
-                  - ALL
+              securityContext:
+                allowPrivilegeEscalation: false
+                runAsNonRoot: true
+                seccompProfile:
+                  type: RuntimeDefault
+                capabilities:
+                  drop:
+                    - ALL
           restartPolicy: Never
