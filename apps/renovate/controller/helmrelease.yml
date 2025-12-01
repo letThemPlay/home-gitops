@@ -33,6 +33,8 @@ spec:
           secretKeyRef:
             name: github
             key: RENOVATE_TOKEN
+      - name: LOG_LEVEL
+        value: "DEBUG"
     renovate:
       securityContext:
         allowPrivilegeEscalation: false
