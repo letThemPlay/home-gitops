@@ -1,5 +1,4 @@
 {
-  "dryRun": "full",
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "platform": "github",
   "repositories": ["letThemPlay/home-gitops"],
