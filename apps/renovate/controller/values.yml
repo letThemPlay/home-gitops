@@ -2,11 +2,17 @@ cronjob:
   schedule: "0 3 * * *"
 redis:
   enabled: false
-envFrom:
-- secretRef:
-    name: github
+#envFrom:
+#- secretRef:
+#    name: github
 env:
-- TEST: "123"
+- name: TEST
+  value: "123"
+- name: RENOVATE_TOKEN
+  valueFrom:
+    secretKeyRef:
+      name: github
+      key: RENOVATE_TOKEN
 #env:
 #- name: RENOVATE_TOKEN
 #  valueFrom:
