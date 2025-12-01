@@ -3,8 +3,8 @@ cronjob:
 redis:
   enabled: false
 envFrom:
-  - secretRef:
-      name: github
+- secretRef:
+    name: github
 #env:
 #- name: RENOVATE_TOKEN
 #  valueFrom:
