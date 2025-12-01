@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: renovate
 resources:
   - helmrepository.yml
-  - helmrelease.yml
+  - cronjob.yml
 
 configMapGenerator:
   - name: renovate-values

@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: renovate-cron-job
+  namespace: renovate
+spec:
+  schedule: '@hourly'
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: renovate
+              image: renovate/renovate:37.74
+              env:
+              - name: RENOVATE_TOKEN
+                valueFrom:
+                  secretKeyRef:
+                    name: github
+                    key: RENOVATE_TOKEN
+              - name: RENOVATE_PLATFORM
+                value: "github"
+              - name: RENOVATE_REPOSITORIES
+                value: "letThemPlay/home-gitops"
