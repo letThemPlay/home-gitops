@@ -12,7 +12,7 @@ spec:
         spec:
           containers:
             - name: renovate
-              image: renovate/renovate:37.74
+              image: renovate/renovate:42.29
               env:
               - name: RENOVATE_TOKEN
                 valueFrom:
