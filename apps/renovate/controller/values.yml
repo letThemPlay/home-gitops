@@ -2,14 +2,17 @@ cronjob:
   schedule: "0 3 * * *"
 redis:
   enabled: false
-env:
-- name: RENOVATE_TOKEN
-  valueFrom:
-    secretKeyRef:
-      name: github
-      key: RENOVATE_TOKEN
-- name: LOG_LEVEL
-  value: DEBUG
+envFrom:
+  - secretRef:
+    name: github
+#env:
+#- name: RENOVATE_TOKEN
+#  valueFrom:
+#    secretKeyRef:
+#      name: github
+#      key: RENOVATE_TOKEN
+#- name: LOG_LEVEL
+#  value: DEBUG
 renovate:
   securityContext:
     allowPrivilegeEscalation: false
