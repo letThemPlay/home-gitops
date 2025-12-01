@@ -13,6 +13,9 @@ env:
     secretKeyRef:
       name: github
       key: RENOVATE_TOKEN
+envList:
+- name: LOG_LEVEL
+  value: "DEBUG"
 #env:
 #- name: RENOVATE_TOKEN
 #  valueFrom:
