@@ -11,7 +11,7 @@ configMapGenerator:
       - values.yaml=values.yml
   - name: renovate-config
     files:
-      - config-map.yaml=config-map.yml
+      - config.json=config.json
 
 configurations:
   - kustomizeconfig.yml
