@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: renovate-config
+  namespace: renovate
+data:
+  config.json: |-
+    {
+      "dryRun": "full",
+      "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+      "platform": "github",
+      "repositories": ["letThemPlay/home-gitops"],
+      "extends": ["config:recommended"],
+      "enabledManagers": ["kubernetes", "flux"],
+      "flux": {
+        "fileMatch": ["cluster/.+\\.ya?ml$", "infrastructure/.+\\.ya?ml$", "apps/.+\\.ya?ml$"]
+      },
+      "kubernetes": {
+        "fileMatch": ["cluster/.+\\.ya?ml$", "infrastructure/.+\\.ya?ml$", "apps/.+\\.ya?ml$"]
+      },
+      "dependencyDashboard": true,
+      "branchConcurrentLimit": 5,
+      "prConcurrentLimit": 5,
+      "baseBranchPatterns": ["main"],
+      "automerge": false
+    }

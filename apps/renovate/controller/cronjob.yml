@@ -14,17 +14,18 @@ spec:
             - name: renovate
               image: renovate/renovate:42.29
               env:
+              - name: RENOVATE_CONFIG_FILE
+                value: '/opt/renovate/config.json'
               - name: RENOVATE_TOKEN
                 valueFrom:
                   secretKeyRef:
                     name: github
                     key: RENOVATE_TOKEN
-              - name: RENOVATE_PLATFORM
-                value: "github"
-              - name: RENOVATE_REPOSITORIES
-                value: "letThemPlay/home-gitops"
               - name: LOG_LEVEL
                 value: "DEBUG"
+              volumeMounts:
+                - name: config-volume
+                  mountPath: /opt/renovate/
               securityContext:
                 allowPrivilegeEscalation: false
                 runAsNonRoot: true
@@ -34,3 +35,7 @@ spec:
                   drop:
                     - ALL
           restartPolicy: Never
+          volumes:
+            - name: config-volume
+              configMap:
+                name: renovate-config
