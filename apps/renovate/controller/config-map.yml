@@ -4,7 +4,7 @@ metadata:
   name: renovate-config
   namespace: renovate
 data:
-  config.json: |
+  config.json: |-
     {
       "dryRun": "full",
       "$schema": "https://docs.renovatebot.com/renovate-schema.json",
