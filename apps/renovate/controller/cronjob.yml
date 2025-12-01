@@ -39,3 +39,6 @@ spec:
             - name: config-volume
               configMap:
                 name: renovate-config
+                items:
+                  - key: "config.json"
+                    path: "config.json"
