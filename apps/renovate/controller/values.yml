@@ -7,7 +7,7 @@ envFrom:
     name: github
 env:
 - name: TEST
-  value: 123
+  value: "123"
 #env:
 #- name: RENOVATE_TOKEN
 #  valueFrom:
