@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: pocketid
 resources:
   - namespace.yml
-  - ocirepository.yml
+  - helmrepository.yml
 
 configMapGenerator:
   - name: pocketid-config
