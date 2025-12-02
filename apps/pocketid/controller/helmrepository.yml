@@ -5,4 +5,4 @@ metadata:
   namespace: pocketid
 spec:
   interval: 1h
-  url: https://anza-labs.gihub.io/charts
+  url: https://anza-labs.github.io/charts
