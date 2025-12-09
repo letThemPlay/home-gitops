@@ -7,4 +7,4 @@ ingressClass:
 replicaCount: 2
 
 cloudflaredServiceMonitor:
-  create: true
+  create: false
