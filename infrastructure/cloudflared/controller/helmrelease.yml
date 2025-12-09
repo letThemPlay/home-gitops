@@ -20,4 +20,4 @@ spec:
     - kind: ConfigMap
       name: cloudflared-config
     - kind: Secret
-      name: credentials
+      name: cloudflared-secrets
