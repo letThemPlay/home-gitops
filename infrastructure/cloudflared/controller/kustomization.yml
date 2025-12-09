@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: pocketid
 resources:
   - helmrepository.yml
+  - helmrelease.yml
 
 configMapGenerator:
   - name: cloudflared-config
