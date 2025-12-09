@@ -1,7 +1,8 @@
 cloudflare:
   tunnelName: "ltp-homelab"
 
-ingressClass: cloudflare
+ingressClass:
+  name: cloudflare
 
 replicaCount: 2
 
