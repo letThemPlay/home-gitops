@@ -21,5 +21,3 @@ spec:
       name: cloudflared-config
     - kind: Secret
       name: credentials
-      valuesKey: connectionString
-      targetPath: database.connectionString
