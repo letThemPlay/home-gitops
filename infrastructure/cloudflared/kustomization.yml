@@ -19,3 +19,20 @@ spec:
       kind: ExternalSecret
       failed: status.conditions.filter(e, e.type == 'Ready').all(e, e.status == 'False')
       current: status.conditions.filter(e, e.type == 'Ready').all(e, e.status == 'True')
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: cloudflared-system
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: cloudflared-secrets
+  interval: 1h
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infrastructure/cloudflared/system
+  prune: true
