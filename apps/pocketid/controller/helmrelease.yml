@@ -1,0 +1,25 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: pocketid
+  namespace: pocketid
+spec:
+  chart:
+    spec:
+      chart: pocketid
+      sourceRef:
+        kind: HelmRepository
+        name: pocketid
+      version: 1.7.2
+  interval: 1m0s
+  install:
+    crds: CreateReplace
+    remediation:
+      retries: 3
+  valuesFrom:
+    - kind: ConfigMap
+      name: pocketid-config
+    - kind: Secret
+      name: pg-connection
+      valuesKey: connectionString
+      targetPath: database.connectionString

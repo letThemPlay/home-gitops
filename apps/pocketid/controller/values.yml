@@ -1,0 +1,41 @@
+replicaCount: 1
+
+host: auth.kdmorris.dev
+
+database:
+  provider: "postgres"
+
+updateStrategy:
+  type: RollingUpdate
+  rollingUpdate:
+    maxUnavailable: 50%
+    partition: 0
+
+backup:
+  enabled: false
+
+config:
+  metricsEnabled: false
+  ui:
+    settings:
+      app:
+        appName: "Geek Net"
+        sessionDuration: 180 # minutes
+      ldap:
+        enabled: false
+
+persistence:
+  data:
+    enabled: false
+
+ingress:
+  enabled: true
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/tls-acme: "true"
+  className: nginx
+  host: auth.kdmorris.dev
+  tls:
+    - secretName:
+      hosts:
+        - auth.kdmorris.dev
