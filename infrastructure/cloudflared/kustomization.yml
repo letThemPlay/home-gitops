@@ -36,3 +36,12 @@ spec:
     name: flux-system
   path: ./infrastructure/cloudflared/controller
   prune: true
+  healthChecks:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: cloudflared-cloudflare-tunnel-ingress-controller
+      namespace: cloudflared
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: controlled-cloudflared-connector
+      namespace: cloudflared
