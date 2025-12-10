@@ -4,3 +4,5 @@ namespace: headlamp
 resources:
   - namespace.yml
   - helmrepository.yml
+  - helmrelease.yml
+  - ingress.yml
