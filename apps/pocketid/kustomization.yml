@@ -36,6 +36,7 @@ metadata:
 spec:
   dependsOn:
     - name: pocketid-secrets
+    - name: pocketid-database
   interval: 1h
   retryInterval: 1m
   timeout: 5m
