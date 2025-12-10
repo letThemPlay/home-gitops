@@ -30,6 +30,8 @@ kind: Ingress
 metadata:
   name: headlamp-cloudflare
   namespace: headlamp
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   ingressClassName: cloudflare
   rules:
@@ -43,3 +45,7 @@ spec:
               number: 80
         path: /
         pathType: ImplementationSpecific
+  tls:
+  - secretName: headlamp.kdmorris.dev
+    hosts:
+    - headlamp.kdmorris.dev
