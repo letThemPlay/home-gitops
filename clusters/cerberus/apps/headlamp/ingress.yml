@@ -32,6 +32,7 @@ metadata:
   namespace: headlamp
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/tls-acme: "true"
 spec:
   ingressClassName: cloudflare
   rules:
