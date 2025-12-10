@@ -6,7 +6,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: pocketid
+      chart: pocket-id
       sourceRef:
         kind: HelmRepository
         name: pocketid
