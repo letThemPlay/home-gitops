@@ -10,7 +10,7 @@ spec:
       chart: envoy-gateway-system
       version: 1.6.1
       sourceRef:
-        kind: OCIRepository
+        kind: HelmRepository
         name: envoy
         namespace: envoygateway
   install:
