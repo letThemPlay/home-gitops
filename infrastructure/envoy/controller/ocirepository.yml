@@ -5,6 +5,9 @@ metadata:
   namespace: envoygateway
 spec:
   interval: 5m
-  url: oci://registry-1.docker.io/envoyproxy/gateway-helm
+  layerSelector:
+    mediaType: application/vnd.cncf.helm.chart.content.v1.tar+gzip
+    operation: copy
+  url: oci://mirror.gcr.io/envoyproxy/gateway-helm
   ref:
-    semver: "1.6.1"
+    tag: v1.6.1
