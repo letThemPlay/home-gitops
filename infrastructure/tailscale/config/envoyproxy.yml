@@ -5,7 +5,7 @@ metadata:
   namespace: tailscale
 spec:
   provider:
-    type: kubernetes
+    type: Kubernetes
     kubernetes:
       envoyService:
         type: LoadBalancer
