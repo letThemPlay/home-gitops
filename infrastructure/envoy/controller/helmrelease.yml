@@ -1,0 +1,24 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: envoy
+  namespace: envoygateway
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: envoy-gateway-system
+      version: 1.6.1
+      sourceRef:
+        kind: OCIRepository
+        name: envoy
+        namespace: envoygateway
+  install:
+    remediation:
+      retries: 1
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
