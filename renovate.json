@@ -6,7 +6,7 @@
       "matchUpdateTypes": ["minor", "patch"],
       "matchCurrentVersion": "!/^0/",
       "automerge": true,
-      "schedule": ["0 7-8 * * *"] // Run renovate daily at 8
+      "schedule": ["* 7-8 * * *"] // Run renovate daily at 8
     }
   ]
 }
