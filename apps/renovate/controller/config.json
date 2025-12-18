@@ -14,5 +14,6 @@
   "branchConcurrentLimit": 5,
   "prConcurrentLimit": 5,
   "baseBranchPatterns": ["main"],
-  "automerge": false
+  "automerge": false,
+  "ignoreTests": true
 }
