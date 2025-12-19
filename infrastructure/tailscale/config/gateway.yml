@@ -16,8 +16,7 @@ spec:
       hostname: "*.kdmoris.dev"
       allowedRoutes:
         namespaces:
-          from:
-            - headlamp
+          from: All
       tls:
         mode: Terminate
         certificateRef:
