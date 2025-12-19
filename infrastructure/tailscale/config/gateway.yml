@@ -7,14 +7,13 @@ metadata:
     external-dns: enabled
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
-
 spec:
   gatewayClassName: tailscale
   listeners:
     - name: https
       protocol: HTTPS
       port: 443
-      hostname *.kdmoris.dev
+      hostname: *.kdmoris.dev
       allowedRoutes:
         namespaces:
           from:
