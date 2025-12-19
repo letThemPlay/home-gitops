@@ -1,11 +1,27 @@
 apiVersion: gateway.networking.k8s.io/v1
-kind: GatewayClass
+kind: Gateway
 metadata:
-  name: tailscale
+  name: tailscale-gateway
+  namespace: tailscale
+  labels:
+    external-dns: enabled
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+
 spec:
-  controllerName: gateway.envoyproxy.io/gatewayclass-controller
-  parametersRef:
-    group: gateway.envoyproxy.io
-    kind: EnvoyProxy
-    name: tailscale-proxy
-    namespace: tailscale
+  gatewayClassName: tailscale
+  listeners:
+    - name: https
+      protocol: HTTPS
+      port: 443
+      hostname *.kdmoris.dev
+      allowedRoutes:
+        namespaces:
+          from:
+            - headlamp
+      tls:
+        mode: Terminate
+        certificateRef:
+        - groups: ''
+          kind: Secret
+          name: headlamp-kdmorris-dev-tls
