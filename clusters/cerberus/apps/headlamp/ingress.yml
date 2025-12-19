@@ -44,28 +44,28 @@
 #        path: /
 #        pathType: ImplementationSpecific
 ---
-apiVersion: gateway.networking.k8s.io/v1
-kind: HTTPRoute
-metadata:
-  name: headlamp-route
-  namespace: headlamp
-#  annotations:
-#    external-dns.alpha.kubernetes.io/hostname: headlamp.kdmorris.dev
-spec:
-  parentRefs:
-    - group: gateway.networking.k8s.io
-      kind: Gateway
-      name: tailscale-gateway
-      namespace: tailscale
-  hostnames:
-    - "headlamp.kdmorris.dev"
-  rules:
-    - matches:
-      - path:
-          type: PathPrefix
-          value: /
-      backendRefs:
-      - group: ""
-        kind: Service
-        name: headlamp
-        port: 80
+#apiVersion: gateway.networking.k8s.io/v1
+#kind: HTTPRoute
+#metadata:
+#  name: headlamp-route
+#  namespace: headlamp
+##  annotations:
+##    external-dns.alpha.kubernetes.io/hostname: headlamp.kdmorris.dev
+#spec:
+#  parentRefs:
+#    - group: gateway.networking.k8s.io
+#      kind: Gateway
+#      name: tailscale-gateway
+#      namespace: tailscale
+#  hostnames:
+#    - "headlamp.kdmorris.dev"
+#  rules:
+#    - matches:
+#      - path:
+#          type: PathPrefix
+#          value: /
+#      backendRefs:
+#      - group: ""
+#        kind: Service
+#        name: headlamp
+#        port: 80
