@@ -19,7 +19,7 @@ config:
   ui:
     settings:
       app:
-        appName: "Geek Net"
+        appName: "Frenchie & the Geek"
         sessionDuration: 180 # minutes
       ldap:
         enabled: false
@@ -27,15 +27,3 @@ config:
 persistence:
   data:
     enabled: false
-
-ingress:
-  enabled: true
-  annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-    kubernetes.io/tls-acme: "true"
-  className: nginx
-  host: auth.kdmorris.dev
-  tls:
-    - secretName:
-      hosts:
-        - auth.kdmorris.dev
