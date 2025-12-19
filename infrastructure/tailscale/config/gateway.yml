@@ -3,6 +3,8 @@ kind: Gateway
 metadata:
   name: tailscale-gateway
   namespace: tailscale
+  labels:
+    external-dns: enabled
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
@@ -19,4 +21,4 @@ spec:
         mode: Terminate
         certificateRefs:
         - kind: Secret
-          name: headlamp-kdmorris-dev-tls
+          name: headlamp-kdmorris-dev
