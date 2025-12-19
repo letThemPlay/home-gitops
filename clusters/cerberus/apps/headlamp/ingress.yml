@@ -49,6 +49,8 @@ kind: HTTPRoute
 metadata:
   name: headlamp-route
   namespace: headlamp
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: headlamp.kdmorris.dev
 spec:
   parentRefs:
     - group: gateway.networking.k8s.io

@@ -21,4 +21,4 @@ spec:
         mode: Terminate
         certificateRefs:
         - kind: Secret
-          name: headlamp-kdmorris-dev
+          name: kdmorris-wildcard-tls
