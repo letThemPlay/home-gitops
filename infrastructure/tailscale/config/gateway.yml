@@ -19,7 +19,7 @@ spec:
           from: All
       tls:
         mode: Terminate
-        certificateRef:
+        certificateRefs:
         - groups: ''
           kind: Secret
           name: headlamp-kdmorris-dev-tls
