@@ -27,6 +27,11 @@ spec:
       name: cloudflare
     txtOwnerId: cerberusk8s
     policy: sync
+    gatewayNamespace: tailscale
+    sources:
+      - service
+      - ingress
+      - httproute
     env:
     - name: CF_API_TOKEN
       valueFrom:
