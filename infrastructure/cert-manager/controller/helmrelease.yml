@@ -22,12 +22,6 @@ spec:
       retries: 3
   uninstall:
     keepHistory: false
-  values:
-    crds:
-      enabled: true
-    prometheus:
-      enabled: true
-    webhook:
-      timeoutSeconds: 4
-    config:
-      enableGatewayAPI: true
+  valuesFrom:
+    - kind: ConfigMap
+      name: certmanager-config

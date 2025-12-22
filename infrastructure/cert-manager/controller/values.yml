@@ -1,0 +1,8 @@
+crds:
+  enabled: true
+prometheus:
+  enabled: true
+webhook:
+  timeoutSeconds: 4
+config:
+  enableGatewayAPI: true
