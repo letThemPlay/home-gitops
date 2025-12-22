@@ -23,6 +23,8 @@ spec:
   uninstall:
     keepHistory: false
   valuesFrom:
+    - kind: ConfigMap
+      name: tailscale-config
     - kind: Secret
       name: tailscale
       valuesKey: clientId
@@ -31,7 +33,3 @@ spec:
       name: tailscale
       valuesKey: clientSecret
       targetPath: oauth.clientSecret
-  values:
-    operatorConfig:
-      defaultTags:
-        - "tag:k8s-operator"
