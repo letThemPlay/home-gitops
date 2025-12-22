@@ -23,5 +23,5 @@ spec:
   uninstall:
     keepHistory: false
   valuesFrom:
-    - kind: configMap
+    - kind: ConfigMap
       name: openebs-config
