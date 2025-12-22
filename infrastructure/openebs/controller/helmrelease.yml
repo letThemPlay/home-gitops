@@ -22,20 +22,6 @@ spec:
       retries: 3
   uninstall:
     keepHistory: false
-  values:
-    engines:
-      local:
-        lvm:
-          enabled: false
-        zfs:
-          enabled: false
-    mayastor:
-      etcd:
-        replicaCount: 2
-      io_engine:
-        cpuCount: "2"
-        coreList: []
-      csi:
-        node:
-          initContainers:
-            enabled: false
+  valuesFrom:
+    - kind: configMap
+      name: openebs-config
