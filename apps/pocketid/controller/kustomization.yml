@@ -4,7 +4,7 @@ namespace: pocketid
 resources:
   - helmrepository.yml
   - helmrelease.yml
-  - httproute.yml
+#  - httproute.yml
 
 configMapGenerator:
   - name: pocketid-config
