@@ -11,7 +11,7 @@ spec:
       paths:
       - backend:
           service:
-            name: pocket-id
+            name: pocketid-pocket-id
             port:
               number: 80
         path: /
