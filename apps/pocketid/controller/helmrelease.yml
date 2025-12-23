@@ -20,6 +20,6 @@ spec:
     - kind: ConfigMap
       name: pocketid-config
     - kind: Secret
-      name: postgres-user
+      name: postgres-creds
       valuesKey: connectionString
       targetPath: database.connectionString
