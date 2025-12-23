@@ -16,7 +16,7 @@ spec:
       database: pocketid
       owner: pocketid
       secret:
-        name: postgres-user
+        name: postgres-creds
 
 # TODO Setup and configure Backup for Postgres 
 #  backup:
