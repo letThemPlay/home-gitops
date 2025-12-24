@@ -538,6 +538,8 @@ gitea:
 
     ## @param gitea.config.server [object] General server settings
     server:
+      DOMAIN: git.kdmorris.dev
+      ROOT_URL: https://git.kdmorris.dev
       SSH_PORT: 22 # rootful image
       SSH_LISTEN_PORT: 2222 # rootless image
 
