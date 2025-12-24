@@ -467,9 +467,10 @@ gitea:
   ## @param gitea.oauth OAuth configuration
   oauth:
     - name: PocketId
-      provider: OpenID Connect
+      provider: openidConnect
       key: c21a77fe-bcaf-4ca1-887a-b470a9d996e7
       autoDiscoverUrl: https://auth.kdmorris.dev/.well-known/openid-configuration
+      useCustomUrls: false
 
     # - name: 'OAuth 1'
     #   provider:
