@@ -568,8 +568,8 @@ gitea:
 
     ## @param gitea.config.openid Configuration for authentication with OpenID (disabled by default)
     openid:
-      ENABLE_OPENID_SIGNIN: true
-      ENABLE_OPENID_SIGNUP: true
+      ENABLE_OPENID_SIGNIN: false
+      ENABLE_OPENID_SIGNUP: false
 
     ## @param gitea.config.oauth2_client OAuth2 client settings
     oauth2_client:
