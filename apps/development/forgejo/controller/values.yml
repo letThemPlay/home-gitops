@@ -537,7 +537,7 @@ gitea:
 
     ## @param gitea.config.database Database configuration (only necessary with an [externally managed DB](#external-database)).
     database:
-      DB_TYPE: postgresql
+      DB_TYPE: postgres
       HOST: postgres-rw
       NAME: forgejo
       USER: forgejo
