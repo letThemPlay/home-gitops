@@ -4,7 +4,7 @@ namespace: headlamp
 resources:
   - helmrepository.yml
   - helmrelease.yml
-  - ingress.yml
+  - httproute.yml
 
 configMapGenerator:
   - name: headlamp-config
