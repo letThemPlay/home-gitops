@@ -17,3 +17,14 @@ spec:
       retries: 3
   uninstall:
     keepHistory: false
+  valuesFrom:
+    - kind: ConfigMap
+      name: forgejo-config
+    - kind: Secret
+      name: postgres-creds
+      valuesKey: password
+      targetPath: gitea.config.database.PASSWD
+#    - kind: Secret
+#      name: oauth
+#      valuesKey: secret
+#      targetPath: gita.oauth.secret

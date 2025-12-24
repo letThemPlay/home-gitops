@@ -4,11 +4,10 @@ namespace: forgejo
 resources:
   - ocirepository.yml
 
-#configMapGenerator:
-#  - name: headlamp-config
-#    files:
-#      - values.yaml=values.yml
-#
-#configurations:
-#  - kustomizeconfig.yml
-#
+configMapGenerator:
+  - name: forgejo-config
+    files:
+      - values.yaml=values.yml
+
+configurations:
+  - kustomizeconfig.yml
