@@ -196,13 +196,18 @@ ingress:
 ## @param httpRoute.matches.timeouts Object containing timeouts.
 ## @param httpRoute.filters Filters to apply on HTTP requests, such as header rewrites or request redirects
 httpRoute:
-  enabled: false
-  annotations: {}
-  parentRefs: []
+  enabled: true
+  annotations: 
+    external-dns.alpha.kubernetes.io/hostname: git.kdmorris.dev
+  parentRefs:
+    - group: gateway.networking.k8s.io
+      kind: Gateway
+      name: tailscale-gateway
+      namespace: tailscale
     # - name: contour #name of the gateway resource
     #   namespace: projectcontour #name space where gateway resource running
-  hostnames: []
-  # - my-filter.example.com
+  hostnames:
+    - git.kdmorris.dev
   matches:
     path:
       type: PathPrefix
