@@ -3,7 +3,6 @@ kind: Kustomization
 namespace: forgejo
 resources:
   - ocirepository.yml
-  - helmrelease.yml
 
 configMapGenerator:
   - name: forgejo-config
