@@ -577,6 +577,7 @@ gitea:
       OPENID_CONNECT_SCOPES: email,profile,forgejo,offline_access
       ENABLE_AUTO_REGISTRATION: true
       ACCOUNT_LINKING: auto
+      USERNAME: email
 
 
     ## @param gitea.config.service Configuration for miscellaneous Forgejo services
