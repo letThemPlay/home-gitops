@@ -16,7 +16,7 @@ spec:
       database: forgejo
       owner: forgejo
       secret:
-        name: forgejo-creds
+        name: postgres-creds
 
 # TODO Setup and configure Backup for Postgres 
 #  backup:
