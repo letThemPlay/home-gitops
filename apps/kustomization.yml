@@ -3,4 +3,3 @@ kind: Kustomization
 resources:
   - renovate/kustomization.yml
   - pocketid/kustomization.yml
-  - headlamp/kustomization.yml
