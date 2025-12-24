@@ -28,7 +28,21 @@
             let
               fhs = pkgs.buildFHSEnv {
                 name = "terraform-fhs";
-                targetPkgs = pkgs: builtins.attrValues { inherit (pkgs) kubectl fluxcd talosctl terraform nixfmt-rfc-style sops age kustomize; };
+                targetPkgs =
+                  pkgs:
+                  builtins.attrValues {
+                    inherit (pkgs)
+                      kubectl
+                      fluxcd
+                      talosctl
+                      terraform
+                      nixfmt-rfc-style
+                      sops
+                      age
+                      kustomize
+                      kubelogin-oidc
+                      ;
+                  };
                 runScript = "zsh";
               };
             in

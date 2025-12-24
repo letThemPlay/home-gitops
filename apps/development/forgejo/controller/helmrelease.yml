@@ -24,7 +24,7 @@ spec:
       name: postgres-creds
       valuesKey: password
       targetPath: gitea.config.database.PASSWD
-#    - kind: Secret
-#      name: oauth
-#      valuesKey: secret
-#      targetPath: gita.oauth.secret
+    - kind: Secret
+      name: forgejo-oauth
+      valuesKey: secret
+      targetPath: gita.oauth.secret
