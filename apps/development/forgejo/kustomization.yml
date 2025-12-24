@@ -34,11 +34,6 @@ spec:
     name: flux-system
   path: ./apps/development/forgejo/database
   prune: true
-  healthCheckExprs:
-    - apiVersion: postgresql.cnpg.io/v1
-      kind: Cluster
-      failed: status.condition.filter(e, e.type == 'Ready').all(e, e.Status == 'False')
-      current: status.condition.filter(e, e.type == 'Ready').all(e, e.Status == 'True')
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
