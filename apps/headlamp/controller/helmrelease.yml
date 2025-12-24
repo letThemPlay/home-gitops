@@ -18,5 +18,5 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: headlamp-config
-    - kind: Secret
-      name: headlamp-secrets
+#    - kind: Secret
+#      name: headlamp-secrets
