@@ -27,4 +27,4 @@ spec:
     - kind: Secret
       name: forgejo-oauth
       valuesKey: secret
-      targetPath: gitea.oauth.secret
+      targetPath: gitea.oauth[0].secret
