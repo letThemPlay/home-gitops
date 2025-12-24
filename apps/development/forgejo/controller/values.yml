@@ -561,11 +561,13 @@ gitea:
     ## @param gitea.config.openid Configuration for authentication with OpenID (disabled by default)
     openid:
       ENABLE_OPENID_SIGNIN: true
+      ENABLE_OPENID_SIGNUP: true
 
     ## @param gitea.config.oauth2_client OAuth2 client settings
     oauth2_client:
       REGISTER_EMAIL_CONFIRM: disable
       OPENID_CONNECT_SCOPES: email,profile,forgejo,offline_access
+      ENABLE_AUTO_REGISTRATION: true
 
 
     ## @param gitea.config.service Configuration for miscellaneous Forgejo services
