@@ -1,7 +1,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: forgejo-system
+  name: forgejo-secrets
   namespace: flux-system
 spec:
   interval: 1h
@@ -10,6 +10,50 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+  path: ./apps/development/orgejo/secrets
+  prune: true
+  healthCheckExprs:
+    - apiVersion: external-secrets.io/v1beta1
+      kind: ExternalSecret
+      failed: status.condition.filter(e, e.type == 'Ready').all(e, e.Status == 'False')
+      current: status.condition.filter(e, e.type == 'Ready').all(e, e.Status == 'True')
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: forgejo-secrets
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: forgejo-secrets
+  interval: 1h
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./apps/development/orgejo/secrets
+  prune: true
+  healthCheckExprs:
+    - apiVersion: postgresql.cnpg.io/v1
+      kind: Cluster
+      failed: status.condition.filter(e, e.type == 'Ready').all(e, e.Status == 'False')
+      current: status.condition.filter(e, e.type == 'Ready').all(e, e.Status == 'True')
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: forgejo-system
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: forgejo-secrets
+    - name: forgejo-database
+  interval: 1h
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
   path: ./apps/development/forgejo/controller
   prune: true
-
