@@ -581,7 +581,7 @@ gitea:
 
     ## @param gitea.config.service Configuration for miscellaneous Forgejo services
     service: 
-      DISABLE_REGISTRATION: true
+      DISABLE_REGISTRATION: false
       ALLOW_ONLY_EXTERNAL_REGISTRATION: true
       ENABLE_INTERNAL_SIGNIN: false
 
