@@ -25,7 +25,7 @@ global:
 namespaceOverride: ''
 
 ## @param replicaCount number of replicas for the deployment
-replicaCount: 1
+replicaCount: 2
 
 ## @section strategy
 ## @param strategy.type strategy type
@@ -540,7 +540,6 @@ gitea:
     server:
       DOMAIN: git.kdmorris.dev
       ROOT_URL: https://git.kdmorris.dev
-      SSH_PORT: 22 # rootful image
       SSH_LISTEN_PORT: 2222 # rootless image
 
     ## @param gitea.config.database Database configuration (only necessary with an [externally managed DB](#external-database)).
