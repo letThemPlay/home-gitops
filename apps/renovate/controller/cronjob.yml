@@ -12,7 +12,7 @@ spec:
         spec:
           containers:
             - name: renovate
-              image: renovate/renovate:42.86
+              image: renovate/renovate:42.88
               env:
               - name: RENOVATE_CONFIG_FILE
                 value: '/opt/renovate/config.json'
