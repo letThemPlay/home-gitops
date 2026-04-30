@@ -3,4 +3,5 @@ kind: Kustomization
 resources:
   - renovate/kustomization.yml
   - pocketid/kustomization.yml
+  - continuwuity/kustomization.yml
 #  - development/forgejo/kustomization.yml
