@@ -8,8 +8,8 @@ resources:
 
 configMapGenerator:
   - name: continuwuity-env
-    files:
-      - envs.yaml=envs.yml
+    envs:
+      - .env
 
 configurations:
   - kustomizeconfig.yml
