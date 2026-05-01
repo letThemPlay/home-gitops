@@ -9,7 +9,7 @@ resources:
 configMapGenerator:
   - name: continuwuity-env
     files:
-      - envs.yml = envs.yaml
+      - envs.yaml=envs.yml
 
 configurations:
   - kustomizeconfig.yml
