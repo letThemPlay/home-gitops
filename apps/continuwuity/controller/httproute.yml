@@ -1,0 +1,25 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: continuwuity-route
+  namespace: matrix
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: matrix.frenchieandthegeek.com
+spec:
+  parentRefs:
+    - group: gateway.networking.k8s.io
+      kind: Gateway
+      name: tailscale-gateway
+      namespace: tailscale
+  hostnames:
+    - "matrix.frenchieandthegeek.com"
+  rules:
+    - matches:
+      - path:
+          type: PathPrefix
+          value: /
+      backendRefs:
+      - group: ""
+        kind: Service
+        name: continuwuity-service
+        port: 80
