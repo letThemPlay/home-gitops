@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: continuwuity
+  name: continuwuity-ingress
   namespace: matrix
 spec:
   ingressClassName: cloudflare
@@ -11,7 +11,7 @@ spec:
       paths:
       - backend:
           service:
-            name: continuwuity
+            name: continuwuity-service
             port:
               number: 80
         path: /
