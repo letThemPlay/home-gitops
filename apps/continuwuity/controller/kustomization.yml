@@ -6,7 +6,6 @@ resources:
   - pvc.yml
   - statefulset.yml
   - service.yml
-  - ingress.yml
 
 configMapGenerator:
   - name: continuwuity-env
