@@ -40,7 +40,7 @@ spec:
                 - NET_BIND_SERVICE
           envFrom:
             - configMapRef:
-              name: continuwuity-env
+                name: continuwuity-env
           readinessProbe:
             httpGet:
               path: /_matrix/federation/v1/version
