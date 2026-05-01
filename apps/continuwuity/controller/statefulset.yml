@@ -41,12 +41,12 @@ spec:
           envFrom:
             - configMapRef:
                 name: continuwuity-env
-          readinessProbe:
-            httpGet:
-              path: /_matrix/federation/v1/version
-              port: http
-            periodSeconds: 4
-            failureThreshold: 5
+#          readinessProbe:
+#            httpGet:
+#              path: /_matrix/federation/v1/version
+#              port: http
+#            periodSeconds: 4
+#            failureThreshold: 5
           resources:
             # Continuwuity might use quite some RAM :3
             requests:
