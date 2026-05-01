@@ -3,12 +3,13 @@ kind: Kustomization
 namespace: matrix
 resources:
   - namespace.yml
-  - helmrepository.yml
+  - pvc.yml
+  - statefulset.yml
 
 configMapGenerator:
-  - name: continuwuity-config
+  - name: continuwuity-env
     files:
-      - values.yaml=values.yml
+      - envs.yml = envs.yaml
 
 configurations:
   - kustomizeconfig.yml

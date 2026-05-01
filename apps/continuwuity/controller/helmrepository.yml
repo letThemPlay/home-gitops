@@ -1,8 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: HelmRepository
-metadata:
-  name: continuwuity
-  namespace: matrix
-spec:
-  interval: 1h
-  url: https://charts.cronce.io/
