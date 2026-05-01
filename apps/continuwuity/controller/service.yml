@@ -4,7 +4,6 @@ metadata:
   name: continuwuity
   namespace: matrix
 spec:
-  clusterIP: "None"
   ports:
     - name: http
       protocol: TCP
