@@ -8,6 +8,18 @@ metadata:
 spec:
   gatewayClassName: tailscale
   listeners:
+    - name: test
+      protocol: HTTPS
+      port: 443
+      hostname: "*.frenchieandthegeek.com"
+      allowedRoutes:
+        namespaces:
+          from: matrix
+      tls:
+        mode: Terminate
+        certificateRefs:
+        - kind: Secret
+          name: frenchieandthegeek-wildcard-tls
     - name: https
       protocol: HTTPS
       port: 443
