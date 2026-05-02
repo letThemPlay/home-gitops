@@ -4,10 +4,10 @@ namespace: ntfy
 
 resources:
   - namespace.yml
-  - deployment.yaml
-  - service.yaml
-  - pvc.yaml
-  - ingress.yaml
+  - deployment.yml
+  - service.yml
+  - pvc.yml
+  - ingress.yml
 
 configMapGenerator: # will parse config from raw config to configmap,it allows for dynamic reload of application if additional app is deployed ie https://github.com/stakater/Reloader
     - name: server-config
