@@ -28,7 +28,7 @@ spec:
             - name: NTFY_LOG_LEVEL # adjust log level
               value: INFO
             - name: NTFY_BASE_URL # add base url
-              value: "ntfy.kdmorris.dev" 
+              value: "https://ntfy.kdmorris.dev" 
           ports: 
             - containerPort: 80
               name: http-ntfy
