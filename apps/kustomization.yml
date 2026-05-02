@@ -4,4 +4,5 @@ resources:
   - renovate/kustomization.yml
   - pocketid/kustomization.yml
   - continuwuity/kustomization.yml
+  - ntfy/kustomization.yml
 #  - development/forgejo/kustomization.yml
