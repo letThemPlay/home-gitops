@@ -27,3 +27,6 @@ config:
 persistence:
   data:
     enabled: false
+
+podannotations:
+  secret.reloader.stakater.com/reload: "postgres-creds"
