@@ -6,10 +6,6 @@ metadata:
   labels:
     app.kubernetes.io/name: postgres
 spec:
-  inheritedMetadata:
-    annotations:
-      secret.reloader.stakater.com/reload: "postgres-creds"
-
   instances: 2
 
   storage:
