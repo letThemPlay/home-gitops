@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: whatsapp-bridge
+  namespace: matrix
+  labels:
+    app: matrix
+    component: whatsapp-bridge
+spec:
+  replicas: 1
+  serviceName: whatsapp-bridge
+  podManagementPolicy: Parallel
+  selector:
+    app: matrix
+    component: whatsapp-bridge
+  template:
+    metadata:
+      labels:
+        app: matrix
+        component: whatsapp-bridge
+    spec:
+      containers:
+        - name: whatsapp-bridge
+          image: dock.mau.dev/mautrix/whatsapp
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8082
+          volumeMounts:
+            - mountPath: /data
+              name: data
+              subPath: data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: whatsapp-bridge-data
