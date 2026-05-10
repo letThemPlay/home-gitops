@@ -24,7 +24,7 @@ spec:
       containers:
         - name: continuwuity
           # use a sha hash <3
-          image: forgejo.ellis.link/continuwuation/continuwuity:v0.5.8
+          image: forgejo.ellis.link/continuwuation/continuwuity:v0.5.9
           command: ["/sbin/conduwuit"]
           imagePullPolicy: IfNotPresent
           ports:
