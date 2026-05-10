@@ -8,6 +8,7 @@ metadata:
   namespace: matrix
 spec:
   internalTrafficPolicy: Cluster
+  publishNotReadyAddresses: true
   ports:
   - port: 8082
     protocol: TCP
