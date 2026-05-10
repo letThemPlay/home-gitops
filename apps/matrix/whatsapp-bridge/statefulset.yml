@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: whatsapp-bridge
-          image: dock.mau.dev/mautrix/whatsapp
+          image: dock.mau.dev/mautrix/whatsapp:v26.04
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
