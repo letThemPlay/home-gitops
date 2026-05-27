@@ -18,6 +18,8 @@ spec:
       labels:
         app: ntfy-pod
     spec:
+      strategy:
+        type: Recreate
       containers:
         - name: ntfy 
           image: binwiederhier/ntfy:v2.23.0 # set deployed version
