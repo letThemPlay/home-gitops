@@ -25,7 +25,7 @@ global:
 namespaceOverride: ''
 
 ## @param replicaCount number of replicas for the deployment
-replicaCount: 2
+replicaCount: 1
 
 ## @section strategy
 ## @param strategy.type strategy type
@@ -352,7 +352,7 @@ persistence:
   claimName: gitea-shared-storage
   size: 10Gi
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   labels: {}
   storageClass:
   subPath:
