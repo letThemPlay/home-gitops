@@ -196,7 +196,7 @@ ingress:
 ## @param httpRoute.matches.timeouts Object containing timeouts.
 ## @param httpRoute.filters Filters to apply on HTTP requests, such as header rewrites or request redirects
 httpRoute:
-  enabled: false
+  enabled: true
   annotations: 
     external-dns.alpha.kubernetes.io/hostname: git.kdmorris.dev
   parentRefs:
@@ -235,7 +235,7 @@ httpRoute:
 ## @param route.tls.caCertificate PEM encoded CA certificate or chain that issued the certificate
 ## @param route.tls.destinationCACertificate PEM encoded CA certificate used to verify the authenticity of final end point when 'termination' is set to 'passthrough' (ignored otherwise)
 route:
-  enabled: true
+  enabled: false
   annotations: {}
   host:
   wildcardPolicy:
