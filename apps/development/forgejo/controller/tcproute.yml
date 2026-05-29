@@ -9,8 +9,6 @@ spec:
       kind: Gateway
       name: tailscale-gateway
       namespace: tailscale
-  hostnames:
-    - "git.kdmorris.dev"
   rules:
     - matches:
       - path:
