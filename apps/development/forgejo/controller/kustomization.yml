@@ -4,6 +4,7 @@ namespace: forgejo
 resources:
   - ocirepository.yml
   - helmrelease.yml
+  - tcproute.yml
 #  - httproute.yml
 
 configMapGenerator:
