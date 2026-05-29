@@ -10,11 +10,7 @@ spec:
       name: tailscale-gateway
       namespace: tailscale
   rules:
-    - matches:
-      - path:
-          type: PathPrefix
-          value: /
-      backendRefs:
+    - backendRefs:
       - group: ""
         kind: Service
         name: forgejo-ssh
