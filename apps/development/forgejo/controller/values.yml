@@ -476,6 +476,9 @@ gitea:
       key: c21a77fe-bcaf-4ca1-887a-b470a9d996e7
       autoDiscoverUrl: https://auth.kdmorris.dev/.well-known/openid-configuration
       useCustomUrls: false
+      groupClaimName: forgejo
+      adminGroup: admin
+      restrictedGroup: restricted
 
     # - name: 'OAuth 1'
     #   provider:
