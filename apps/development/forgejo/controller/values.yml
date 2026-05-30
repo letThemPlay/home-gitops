@@ -476,7 +476,7 @@ gitea:
       groupClaimName: forgejo
       adminGroup: admin
       restrictedGroup: restricted
-      scopes: profile email openid
+      scopes: profile email openid forgejo
 
     # - name: 'OAuth 1'
     #   provider:
