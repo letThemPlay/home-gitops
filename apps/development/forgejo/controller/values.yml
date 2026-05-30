@@ -32,10 +32,7 @@ replicaCount: 1
 ## @param strategy.rollingUpdate.maxSurge maxSurge
 ## @param strategy.rollingUpdate.maxUnavailable maxUnavailable
 strategy:
-  type: 'RollingUpdate'
-  rollingUpdate:
-    maxSurge: '100%'
-    maxUnavailable: 0
+  type: 'Recreate'
 
 ## @param clusterDomain cluster domain
 clusterDomain: cluster.local
