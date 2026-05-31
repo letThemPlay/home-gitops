@@ -571,7 +571,7 @@ gitea:
     ## @param gitea.config.oauth2_client OAuth2 client settings
     oauth2_client:
       REGISTER_EMAIL_CONFIRM: disable
-      OPENID_CONNECT_SCOPES: email,profile,forgejo,offline_access,groups
+      OPENID_CONNECT_SCOPES: email profile openid groups
       ENABLE_AUTO_REGISTRATION: true
       ACCOUNT_LINKING: auto
       USERNAME: username
