@@ -477,6 +477,9 @@ gitea:
       adminGroup: forgejo-admin
       restrictedGroup: forgejo-restricted
       scopes: profile,email,openid,groups
+      GROUP_CLAIM_NAME: groups
+      ADMIN_GROUP: forgejo-admin
+      OPENID_CONNECT_SCOPES: "openid email profile groups"
 
     # - name: 'OAuth 1'
     #   provider:
