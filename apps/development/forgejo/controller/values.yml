@@ -629,7 +629,11 @@ gitea:
     api: {}
 
     ## @param gitea.config.oauth2 Settings for the [OAuth2 provider](https://forgejo.org/docs/latest/admin/oauth2-provider/)
-    oauth2: {}
+    oauth2:
+      ENABLED: true
+      GROUP_CLAIM_NAME: groups
+      ADMIN_GROUP: forgejo-admin
+      OPENID_CONNECT_SCOPES: "openid email profile groups"
 
     ## @param gitea.config.i18n Internationalization settings
     i18n: {}
