@@ -472,12 +472,11 @@ gitea:
       provider: openidConnect
       key: c21a77fe-bcaf-4ca1-887a-b470a9d996e7
       autoDiscoverUrl: https://auth.kdmorris.dev/.well-known/openid-configuration
-      requiredClaimName: forgejo
       useCustomUrls: false
-      groupClaimName: forgejo
-      adminGroup: admin
-      restrictedGroup: restricted
-      scopes: profile email openid forgejo groups
+      groupClaimName: groups
+      adminGroup: forgejo-admin
+      restrictedGroup: forgejo-restricted
+      scopes: profile email openid groups
 
     # - name: 'OAuth 1'
     #   provider:
