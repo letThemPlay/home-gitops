@@ -473,7 +473,7 @@ gitea:
       key: c21a77fe-bcaf-4ca1-887a-b470a9d996e7
       autoDiscoverUrl: https://auth.kdmorris.dev/.well-known/openid-configuration
       useCustomUrls: false
-      scopes: profile,email,openid,groups
+      #scopes: profile,email,openid,groups
 
     # - name: 'OAuth 1'
     #   provider:
@@ -630,7 +630,7 @@ gitea:
       ENABLED: true
       GROUP_CLAIM_NAME: groups
       ADMIN_GROUP: forgejo-admin
-      OPENID_CONNECT_SCOPES: "openid email profile groups"
+      #OPENID_CONNECT_SCOPES: "openid email profile groups"
 
     ## @param gitea.config.i18n Internationalization settings
     i18n: {}
