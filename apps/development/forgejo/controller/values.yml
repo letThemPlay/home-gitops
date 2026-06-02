@@ -497,7 +497,8 @@ gitea:
   additionalConfigFromEnvs: []
 
   ## @param gitea.podAnnotations Annotations for the Forgejo pod
-  podAnnotations: {}
+  podAnnotations:
+    secret.reloader.stakater.com/reload: "postgres-creds"
 
   ## @param gitea.ssh.logLevel Configure OpenSSH's log level. Only available for root-based Forgejo image.
   ssh:
