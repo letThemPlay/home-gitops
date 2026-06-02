@@ -6,3 +6,4 @@ resources:
   - continuwuity/kustomization.yml
   - ntfy/kustomization.yml
   - development/forgejo/kustomization.yml
+  - development/woodpecker/kustomization.yml
