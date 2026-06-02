@@ -4,3 +4,12 @@ namespace: woodpecker
 resources:
   - namespace.yml
   - ocirepository.yml
+  - helmrelease.yml
+
+configMapGenerator:
+  - name: woodpecker-config
+    files:
+      - values.yaml=values.yml
+
+configurations:
+  - kustomizeconfig.yml
