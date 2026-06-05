@@ -38,3 +38,15 @@ spec:
         certificateRefs:
         - kind: Secret
           name: kdmorris-wildcard-tls
+    - name: xmage
+      protocol: HTTPS
+      port: 17171
+      hostname: "xmage.kdmorris.dev"
+      allowedRoutes:
+        namespaces:
+          from: xmage
+      tls:
+        mode: Terminate
+        certificateRefs:
+        - kind: Secret
+          name: kdmorris-wildcard-tls
