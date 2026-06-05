@@ -23,7 +23,7 @@ spec:
             - xmage.kdmorris.dev
       containers:
         - name: xmage 
-          image: woodsjail/xmage:1.4.58-dev
+          image: klastic/xmage-beta:1.4.58-dev_2025-10-06_20-40
           env: 
             - name: XMAGE_DOCKER_SERVER_ADDRESS # set timezone
               value: "xmage.kdmorris.dev"
