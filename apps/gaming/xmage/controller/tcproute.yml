@@ -2,6 +2,8 @@ apiVersion: gateway.networking.k8s.io/v1alpha2
 kind: TCPRoute
 metadata:
   name: tcp-route
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: xmage.kdmorris.dev
 spec:
   parentRefs:
     - group: gateway.networking.k8s.io
