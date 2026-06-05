@@ -27,6 +27,8 @@ spec:
           env: 
             - name: XMAGE_DOCKER_SERVER_ADDRESS # set timezone
               value: "https://xmage.kdmorris.dev"
+            - name: XMAGE_DOCKER_BIND_IP
+              value : 0.0.0.0
             - name: XMAGE_DOCKER_SERVER_NAME # enable/disable debug
               value: "xmage-server"
             - name: XMAGE_DOCKER_MAX_SECONDS_IDLE # adjust log level
