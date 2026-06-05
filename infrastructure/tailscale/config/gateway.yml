@@ -26,22 +26,22 @@ spec:
       allowedRoutes:
         namespaces:
           from: All
+    - name: xmage-1
+      protocol: TCP
+      port: 17171
+      allowedRoutes:
+        namespaces:
+          from: All
+    - name: xmage-2
+      protocol: TCP
+      port: 17179
+      allowedRoutes:
+        namespaces:
+          from: All
     - name: https
       protocol: HTTPS
       port: 443
       hostname: "*.kdmorris.dev"
-      allowedRoutes:
-        namespaces:
-          from: All
-      tls:
-        mode: Terminate
-        certificateRefs:
-        - kind: Secret
-          name: kdmorris-wildcard-tls
-    - name: xmage
-      protocol: HTTPS
-      port: 17171
-      hostname: "xmage.kdmorris.dev"
       allowedRoutes:
         namespaces:
           from: All

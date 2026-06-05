@@ -1,0 +1,20 @@
+apiVersion: gateway.networking.k8s.io/v1alpha2
+kind: TCPRoute
+metadata:
+  name: tcp-route
+spec:
+  parentRefs:
+    - group: gateway.networking.k8s.io
+      kind: Gateway
+      name: tailscale-gateway
+      namespace: tailscale
+  rules:
+    - backendRefs:
+      - group: ""
+        kind: Service
+        name: xmage-1
+        port: 17171
+      - group: ""
+        kind: Service
+        name: xmage-2
+        port: 17179
