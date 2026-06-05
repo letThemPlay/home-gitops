@@ -26,7 +26,7 @@ spec:
           image: woodsjail/xmage:1.4.58-dev
           env: 
             - name: XMAGE_DOCKER_SERVER_ADDRESS # set timezone
-              value: "https://xmage.kdmorris.dev"
+              value: "xmage.kdmorris.dev"
             - name: XMAGE_DOCKER_BIND_IP
               value : 0.0.0.0
             - name: XMAGE_DOCKER_SERVER_NAME # enable/disable debug
