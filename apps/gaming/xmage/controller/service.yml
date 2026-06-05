@@ -5,11 +5,11 @@ metadata:
   namespace: ntfy
 spec:
   ports:
-    - name: 
+    - name: xmage-17171
       protocol: TCP
       port: 17171
       targetPort: xmage-1
-    - name: 
+    - name: xmage-17179
       protocol: TCP
       port: 17179
       targetPort: xmage-2
