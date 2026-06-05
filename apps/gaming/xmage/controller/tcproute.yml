@@ -12,9 +12,9 @@ spec:
     - backendRefs:
       - group: ""
         kind: Service
-        name: xmage-1
+        name: xmage-svc
         port: 17171
       - group: ""
         kind: Service
-        name: xmage-2
+        name: xmage-svc
         port: 17179

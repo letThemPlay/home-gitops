@@ -5,4 +5,5 @@ resources:
   - namespace.yml
   - pvc.yml
   - deployment.yml
+  - service.yml
   - tcproute.yml

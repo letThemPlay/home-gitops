@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: xmage-svc  
+  namespace: ntfy
+spec:
+  ports:
+    - name: 
+      protocol: TCP
+      port: 17171
+      targetPort: xmage-1
+    - name: 
+      protocol: TCP
+      port: 17179
+      targetPort: xmage-2
+  type: ClusterIP
+  selector:
+    app: xmage-pod
