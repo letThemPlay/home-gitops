@@ -23,17 +23,17 @@ spec:
             - xmage.kdmorris.dev
       containers:
         - name: xmage 
-          image: klastic/xmage-beta:1.4.58-dev_2025-10-06_20-40
+          image: klastic/xmage-beta:1.4.59-dev_2026-05-26_22-35
           env: 
-            - name: XMAGE_DOCKER_SERVER_ADDRESS # set timezone
+            - name: XMAGE_DOCKER_SERVER_ADDRESS
               value: "xmage.kdmorris.dev"
             - name: XMAGE_DOCKER_BIND_IP
               value : 0.0.0.0
-            - name: XMAGE_DOCKER_SERVER_NAME # enable/disable debug
+            - name: XMAGE_DOCKER_SERVER_NAME
               value: "xmage-server"
-            - name: XMAGE_DOCKER_MAX_SECONDS_IDLE # adjust log level
+            - name: XMAGE_DOCKER_MAX_SECONDS_IDLE
               value: "6000"
-            - name: XMAGE_DOCKER_AUTHENTICATION_ACTIVATED # add base url
+            - name: XMAGE_DOCKER_AUTHENTICATION_ACTIVATED
               value: "false" 
           ports: 
             - containerPort: 17171
