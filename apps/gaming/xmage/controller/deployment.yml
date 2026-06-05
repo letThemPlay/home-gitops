@@ -38,13 +38,6 @@ spec:
               name: xmage-1
             - containerPort: 17179
               name: xmage-2
-          resources:
-            limits:
-              memory: 300Mi
-              cpu:  200m
-            requests:
-                  cpu: 150m
-                  memory: 150Mi
           volumeMounts:
             - mountPath: /xmage/mage-server/db
               name: config-volume # generated via configMapGenerator from kustomization file
