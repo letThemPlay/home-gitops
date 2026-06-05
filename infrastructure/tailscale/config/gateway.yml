@@ -44,7 +44,7 @@ spec:
       hostname: "xmage.kdmorris.dev"
       allowedRoutes:
         namespaces:
-          from: xmage
+          from: All
       tls:
         mode: Terminate
         certificateRefs:
