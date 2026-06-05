@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xmage-deployment
+  labels:
+    app: xmage-deployment
+spec:
+  revisionHistoryLimit: 1
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xmage-pod
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: xmage-pod
+    spec:
+      hostAliases:
+        - ip: 0.0.0.0
+          hostnames:
+            - xmage.kdmorris.dev
+      containers:
+        - name: xmage 
+          image: woodsjail/xmage:1.4.58-dev
+          env: 
+            - name: XMAGE_DOCKER_SERVER_ADDRESS # set timezone
+              value: "https://xmage.kdmorris.dev"
+            - name: XMAGE_DOCKER_SERVER_NAME # enable/disable debug
+              value: "xmage-server"
+            - name: XMAGE_DOCKER_MAX_SECONDS_IDLE # adjust log level
+              value: "6000"
+            - name: XMAGE_DOCKER_AUTHENTICATION_ACTIVATED # add base url
+              value: "false" 
+          ports: 
+            - containerPort: 17171
+              name: xmage-1
+            - containerPort: 17179
+              name: xmage-2
+          resources:
+            limits:
+              memory: 300Mi
+              cpu:  200m
+            requests:
+                  cpu: 150m
+                  memory: 150Mi
+          volumeMounts:
+            - mountPath: /xmage/mage-server/db
+              name: config-volume # generated via configMapGenerator from kustomization file
+      volumes:
+        - name: config-volume
+          persistentVolumeClaim: # stores /cache/ntfy in defined pv
+            claimName: xmage-pvc

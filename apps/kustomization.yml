@@ -7,3 +7,4 @@ resources:
   - ntfy/kustomization.yml
   - development/forgejo/kustomization.yml
   - development/woodpecker/kustomization.yml
+  - gaming/xmage/kustomization.yml
