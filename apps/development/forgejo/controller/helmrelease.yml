@@ -27,4 +27,4 @@ spec:
     - kind: Secret
       name: postgres-bootstrap-creds
       valuesKey: password
-      targetPath: POSTGRES_PASSWORD
+      targetPath: gitea.config.database.PASSWD
