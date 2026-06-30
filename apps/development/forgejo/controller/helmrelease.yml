@@ -24,3 +24,7 @@ spec:
       name: forgejo-oauth
       valuesKey: secret
       targetPath: gitea.oauth[0].secret
+    - kind: Secret
+      name: postgres-bootstrap-creds
+      valuesKey: password
+      targetPath: POSTGRES_PASSWORD
