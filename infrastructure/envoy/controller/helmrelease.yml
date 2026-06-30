@@ -9,6 +9,7 @@ spec:
     kind: OCIRepository
     name: envoy
   install:
+    crds: Skip
     remediation:
       retries: 1
   upgrade:
