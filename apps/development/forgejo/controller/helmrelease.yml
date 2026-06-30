@@ -21,10 +21,6 @@ spec:
     - kind: ConfigMap
       name: forgejo-config
     - kind: Secret
-      name: postgres-creds
-      valuesKey: password
-      targetPath: gitea.config.database.PASSWD
-    - kind: Secret
       name: forgejo-oauth
       valuesKey: secret
       targetPath: gitea.oauth[0].secret

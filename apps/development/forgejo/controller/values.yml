@@ -546,7 +546,9 @@ gitea:
       HOST: postgres-rw
       NAME: forgejo
       USER: forgejo
-      # PASSWD - Passed through by Secret
+      PASSWD:
+        existingSecret: postgres-app
+        secretKey: password
 
     ## @param gitea.config.indexer Settings for what content is indexed and how
     indexer: {}
